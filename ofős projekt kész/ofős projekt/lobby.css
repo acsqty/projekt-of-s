@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;700&display=swap');
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            overflow-x: hidden;
+            position: relative;
+        }
+        .neon-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .neon-bg span {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: float 12s infinite alternate;
+        }
+        .neon-bg .c1 { background: #3b82f6; width: 400px; height: 400px; left: 5vw; top: 10vh; animation-delay: 0s; }
+        .neon-bg .c2 { background: #a21caf; width: 300px; height: 300px; right: 10vw; top: 20vh; animation-delay: 2s; }
+        .neon-bg .c3 { background: #f59e42; width: 250px; height: 250px; left: 30vw; bottom: 10vh; animation-delay: 4s; }
+        .neon-bg .c4 { background: #10b981; width: 200px; height: 200px; right: 20vw; bottom: 5vh; animation-delay: 6s; }
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-40px) scale(1.1); }
+        }
+        .lobby-container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .lobby-title {
+            font-family: 'Orbitron', 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 0.1em;
+            color: #fff;
+            text-shadow: 0 0 20px #3b82f6, 0 0 40px #a21caf, 0 0 80px #3b82f6;
+            margin-bottom: 0.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .lobby-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: #f59e42;
+            text-shadow: 0 0 10px #3b82f6;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        .lobby-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .lobby-btn {
+            font-family: 'Orbitron', 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 1.5rem;
+            background: linear-gradient(90deg, #3b82f6 0%, #a21caf 100%);
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 0 30px #3b82f6, 0 0 60px #a21caf;
+            cursor: pointer;
+            margin: 0.5rem 0;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .lobby-btn:before {
+            content: '';
+            position: absolute;
+            left: -75%;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+            transform: skewX(-20deg);
+            transition: left 0.4s;
+        }
+        .lobby-btn:hover:before {
+            left: 120%;
+        }
+        .lobby-btn:hover {
+            transform: scale(1.08) rotate(-2deg);
+            box-shadow: 0 0 60px #f59e42, 0 0 120px #a21caf;
+            background: linear-gradient(90deg, #a21caf 0%, #3b82f6 100%);
+        }
+        @media (max-width: 700px) {
+            .lobby-title { font-size: 2.2rem; }
+            .lobby-subtitle { font-size: 1.1rem; }
+            .lobby-btn { font-size: 1rem; padding: 1rem 1.5rem; }
+            .lobby-btns { gap: 1rem; }
+        }

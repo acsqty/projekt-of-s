@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minigame Lobby</title>
+    <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+    <div class="neon-bg">
+        <span class="c1"></span>
+        <span class="c2"></span>
+        <span class="c3"></span>
+        <span class="c4"></span>
+    </div>
+    <div class="lobby-container">
+        <div class="lobby-title">MINIGAME LOBBY</div>
+        <div class="lobby-subtitle">Válaszd ki a játékot!</div>
+        <div class="lobby-btns">
+            <button class="lobby-btn" onclick="openGame('dodge.html')">Dodge Blocks</button>
+            <button class="lobby-btn" onclick="openGame('memory.html')">Memory Match</button>
+            <button class="lobby-btn" onclick="openGame('reaction.html')">Reaction Time</button>
+            <button class="lobby-btn" onclick="openGame('target.html')">Click Target</button>
+        </div>
+    </div>
+    <script>
+        function openGame(file) {
+            window.open(file, '_blank');
+        }
+    </script>
+</body>
+</html>

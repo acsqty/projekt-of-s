@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click Target</title>
+    <link rel="stylesheet" href="targer.css">
+</head>
+<body>
+    <div class="neon-bg">
+        <span class="c1"></span>
+        <span class="c2"></span>
+        <span class="c3"></span>
+        <span class="c4"></span>
+    </div>
+    <div class="game-container">
+        <div class="game-title">CLICK TARGET</div>
+        <div class="game-subtitle">teszteld a reflexedet:</div>
+        <canvas id="target-canvas" width="400" height="200"></canvas>
+        <div id="target-score">Score: 0</div>
+        <div id="target-highscore">Highscore: 0</div>
+        <div class="game-btns">
+            <button class="game-btn" onclick="startTargetGame()">Újraindítás</button>
+            <button class="game-btn" onclick="window.close()">FŐmenü!</button>
+        </div>
+    </div>
+    
+    <script src="targer.js"></script>
+</body>
+</html>
